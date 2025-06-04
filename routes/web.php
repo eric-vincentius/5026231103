@@ -77,5 +77,8 @@ Route::get('/pegawai', [PegawaiDBController::class,'index']);
 Route::get('/pegawai/tambah', [PegawaiDBController::class,'tambah']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class,'edit']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class,'hapus']);
+Route::get('pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+
 Route::post('/pegawai/store', [PegawaiDBController::class,'store']);
 Route::post('/pegawai/update', [PegawaiDBController::class,'update']);
