@@ -6,6 +6,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MobilController;
 
 
 /*
@@ -82,3 +83,13 @@ Route::get('pegawai/cari', [PegawaiDBController::class, 'cari']);
 
 Route::post('/pegawai/store', [PegawaiDBController::class,'store']);
 Route::post('/pegawai/update', [PegawaiDBController::class,'update']);
+
+Route::get('/crud', [MobilController::class,'index']);
+Route::get('/crud/tambah', [MobilController::class,'tambah']);
+Route::get('/crud/edit/{id}', [MobilController::class,'edit']);
+Route::get('/crud/hapus/{id}', [MobilController::class,'hapus']);
+Route::get('crud/cari', [MobilController::class, 'cari']);
+
+
+Route::post('/crud/store', [MobilController::class,'store']);
+Route::post('/crud/update', [MobilController::class,'update']);
