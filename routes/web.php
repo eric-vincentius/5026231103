@@ -7,6 +7,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MobilController;
+use App\Http\Controllers\TrafficController;
+use App\Http\Controllers\KaryawanController;
 
 
 /*
@@ -90,6 +92,12 @@ Route::get('/crud/edit/{id}', [MobilController::class,'edit']);
 Route::get('/crud/hapus/{id}', [MobilController::class,'hapus']);
 Route::get('crud/cari', [MobilController::class, 'cari']);
 
-
 Route::post('/crud/store', [MobilController::class,'store']);
 Route::post('/crud/update', [MobilController::class,'update']);
+
+Route::get('/latihan2', [TrafficController::class, 'index']);
+
+Route::get('/latihan3', [KaryawanController::class, 'index'])->name('karyawan.index');
+Route::get('/karyawan/tambah', [KaryawanController::class, 'create']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::delete('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
