@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\TrafficController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 
 /*
@@ -101,3 +102,9 @@ Route::get('/latihan3', [KaryawanController::class, 'index'])->name('karyawan.in
 Route::get('/karyawan/tambah', [KaryawanController::class, 'create']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 Route::delete('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
+
+Route::get('/latihan1', [KeranjangBelanjaController::class, 'indexkeranjangbelanja']);
+Route::get('/latihan1/belikeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'belikeranjangbelanja']);
+Route::get('/latihan1/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
+Route::post('/latihan1/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
+Route::post('/latihan1/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
