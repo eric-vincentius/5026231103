@@ -10,6 +10,7 @@ use App\Http\Controllers\MobilController;
 use App\Http\Controllers\TrafficController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\NilaiController;
 
 
 /*
@@ -108,3 +109,7 @@ Route::get('/latihan1/belikeranjangbelanja/{id}', [KeranjangBelanjaController::c
 Route::get('/latihan1/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
 Route::post('/latihan1/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
 Route::post('/latihan1/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
+
+Route::get('/eas', [NilaiController::class, 'index']);
+Route::get('/eas/tambah', [NilaiController::class, 'tambah']);
+Route::post('/eas/setor', [NilaiController::class, 'setor']);
